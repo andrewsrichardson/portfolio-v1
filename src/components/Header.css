@@ -1,7 +1,7 @@
 header {
   position: fixed;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   width: 100%;
 }
 h2 {
@@ -9,4 +9,10 @@ h2 {
 }
 a {
   text-decoration: none;
+}
+.white {
+  color: #81837e;
+}
+.black {
+  color: #16202b;
 }
