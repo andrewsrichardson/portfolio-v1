@@ -1,0 +1,12 @@
+header {
+  position: fixed;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+h2 {
+  margin-right: 2rem;
+}
+a {
+  text-decoration: none;
+}

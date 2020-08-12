@@ -1,0 +1,16 @@
+section {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+.about {
+  background-color: #2c2930;
+}
+.projects {
+  background-color: #c6b28a;
+}
+.work {
+  background-color: #b2b89e;
+}
+.contact {
+  background-color: #81837e;
+}

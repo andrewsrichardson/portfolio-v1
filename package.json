@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "Web Developer / Designer - Andrew Richardson",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "A Web Developer / Designer from London.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Andrew Richardson <and.richardson@live.co.uk>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
@@ -30,8 +30,9 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75",
+    "typeface-neuton": "0.0.72",
+    "typeface-roboto-slab": "^1.1.4",
+    "typeface-titillium-web": "0.0.72",
     "typography": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19"
   },
