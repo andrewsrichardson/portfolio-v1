@@ -13,7 +13,7 @@ const BlogIndex = ({ data, location }) => {
 
   useScrollPosition(
     ({ prevPos, currPos }) => {
-      const isDark = currPos.y < -420
+      const isDark = currPos.y < -1420
 
       const shouldBeStyle = isDark ? "dark" : "white"
 
