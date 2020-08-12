@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { graphql } from "gatsby"
 import { useScrollPosition } from "@n8tb1t/use-scroll-position"
 import "./index.css"
@@ -11,10 +11,20 @@ const BlogIndex = ({ data, location }) => {
 
   const [headerStyle, setHeaderStyle] = useState("white")
 
+  const [elementPosition, setElementPosition] = useState({ x: 0, y: 0 })
+  const elementRef = useRef()
+
+  useScrollPosition(
+    ({ currPos }) => {
+      setElementPosition(currPos)
+    },
+    [],
+    elementRef
+  )
+
   useScrollPosition(
     ({ prevPos, currPos }) => {
-      const isDark = currPos.y < -1420
-
+      const isDark = elementPosition.y + currPos.y < 0
       const shouldBeStyle = isDark ? "dark" : "white"
 
       if (JSON.stringify(shouldBeStyle) === JSON.stringify(headerStyle)) return
@@ -28,10 +38,10 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Header color={headerStyle}></Header>
-      <section className="about"></section>
-      <section className="projects"></section>
-      <section className="work"></section>
-      <section className="contact"></section>
+      <section id="about" className="about"></section>
+      <section id="projects" ref={elementRef} className="projects"></section>
+      <section id="work" className="work"></section>
+      <section id="contact" className="contact"></section>
     </Layout>
   )
 }

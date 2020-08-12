@@ -6,13 +6,19 @@ header {
 }
 h2 {
   margin-right: 2rem;
+  cursor: pointer;
 }
 a {
   text-decoration: none;
+  color: inherit;
+  box-shadow: none;
 }
-.white {
+.white > a {
   color: #81837e;
 }
-.black {
+.black > a {
   color: #16202b;
+}
+.active {
+  border-bottom: 1px black solid;
 }
