@@ -17,3 +17,18 @@ h2 {
   font-family: "Titillium Web", "Georgia", serif;
   font-weight: 300;
 }
+h3 {
+  font-family: "Titillium Web", "Georgia", serif;
+  font-weight: 300;
+  font-size: 2rem;
+}
+h4 {
+  font-family: "Neuton", "Georgia", serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+p {
+  font-family: "Neuton", "Georgia", serif;
+  font-weight: 200;
+  font-size: 1.5rem;
+}

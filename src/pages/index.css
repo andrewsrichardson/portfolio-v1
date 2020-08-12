@@ -7,13 +7,44 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=2c293000&noise=626262&density=32&opacity=18);
 }
-.projects {
+.experience {
   background-color: #c6b28a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=2c293000&noise=626262&density=32&opacity=18);
 }
-.work {
-  background-color: #b2b89e;
+.vertical {
+  height: 80ch;
+  width: 70ch;
+  border: #2c2930 2px solid;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.horizontal {
+  position: absolute;
+  height: 70ch;
+  width: 80ch;
+  border: #2c2930 2px solid;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.content {
+  margin: auto;
+  width: 50ch;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.university {
+  border-top: #2c2930 2px solid;
+}
+
 .contact {
   background-color: #81837e;
 }
@@ -64,4 +95,19 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.highlight {
+  background-color: #b2b89e;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #b2b89e 50%);
+}
+
+.work {
+  background-color: #b2b89e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=2c293000&noise=626262&density=32&opacity=18);
+}
+.work-content {
 }

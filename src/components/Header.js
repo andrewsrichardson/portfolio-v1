@@ -20,12 +20,12 @@ const Header = ({ color }) => {
       <h2 className={color}>
         <LocalLink
           activeClass="active dark"
-          to="projects"
+          to="experience"
           spy={true}
           smooth={true}
           duration={400}
         >
-          Projects
+          Experience
         </LocalLink>
       </h2>
       <h2 className={color}>

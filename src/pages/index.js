@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react"
 import { graphql } from "gatsby"
+import { Image } from "gatsby-image"
 import { useScrollPosition } from "@n8tb1t/use-scroll-position"
 import "./index.css"
 import Layout from "../components/layout"
@@ -76,9 +77,50 @@ const BlogIndex = ({ data, location }) => {
             <h2>Freelance Web Developer & Designer based in London.</h2>
           </animated.div>
         </div>
+        <div className="arrow"></div>
       </section>
-      <section id="projects" ref={elementRef} className="projects"></section>
-      <section id="work" className="work"></section>
+      <section id="experience" ref={elementRef} className="experience">
+        <div className="vertical">
+          {" "}
+          <div className="horizontal">
+            <div className="content">
+              <div className="work-experience">
+                <h3>
+                  <span className="highlight">Accenture</span>
+                </h3>
+                <h4>
+                  Technical Architect (Full Stack Developer) <i>1 Year</i>
+                </h4>
+                <p>I worked motherfucker</p>
+              </div>
+              <div className="university">
+                <h3>
+                  <span className="highlight">University of Reading</span>
+                </h3>
+                <h4>
+                  BSc Computer Science <i>2:1</i>
+                </h4>
+                <p>
+                  Dissertation completed as a web project using Machine Learning
+                  (Tensorflow) to create a procedurally generated stream of
+                  music, first class grade achieved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="work" className="work">
+        <h2>Projects</h2>
+        <div className="work-content">
+          <div className="machine-music">
+            <h4>Machine Music</h4>
+            {/* <Image></Image> */}
+          </div>
+          <div className="trust-this-feast"></div>
+          <div className="music-defined"></div>
+        </div>
+      </section>
       <section id="contact" className="contact"></section>
     </Layout>
   )
@@ -91,6 +133,20 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    machine_music: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      childImageSharp {
+        fixed(width: 400, height: 400) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    trust_this_feast: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      childImageSharp {
+        fixed(width: 400, height: 400) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
