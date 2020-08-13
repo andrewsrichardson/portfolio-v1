@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react"
 import { graphql } from "gatsby"
-import { Image } from "gatsby-image"
+import Image from "gatsby-image"
 import { useScrollPosition } from "@n8tb1t/use-scroll-position"
 import "./index.css"
 import Layout from "../components/layout"
@@ -40,7 +40,7 @@ const BlogIndex = ({ data, location }) => {
   //animation
   const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
   const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
-  const trans2 = (x, y) => `translate3d(${x / 8 + 35}px,${y / 8 - 230}px,0)`
+  const trans2 = (x, y) => `translate3d(${x / 8 - 40}px,${y / 8 + 50}px,0)`
   const trans3 = (x, y) => `translate3d(${x / 6 - 250}px,${y / 6 - 200}px,0)`
   const trans4 = (x, y) => `translate3d(${x / 3.5}px,${y / 3.5}px,0)`
 
@@ -91,7 +91,11 @@ const BlogIndex = ({ data, location }) => {
                 <h4>
                   Technical Architect (Full Stack Developer) <i>1 Year</i>
                 </h4>
-                <p>I worked motherfucker</p>
+                <p>
+                  Worked as part of a small team as a Google Cloud Platform
+                  Engineer to produce a single page sentiment analysis web app
+                  for a major retailer.
+                </p>
               </div>
               <div className="university">
                 <h3>
@@ -114,14 +118,77 @@ const BlogIndex = ({ data, location }) => {
         <h2>Projects</h2>
         <div className="work-content">
           <div className="machine-music">
-            <h4>Machine Music</h4>
-            {/* <Image></Image> */}
+            <div className="data-wrapper">
+              <h3>
+                <span className="highlight">Machine Music</span>
+              </h3>
+              <p>Designed/ Developed</p>
+              <div>
+                <a
+                  href="https://github.com/andrewsrichardson/machine-music"
+                  target="_blank"
+                  role="button"
+                  aria-label="link to machine music repo"
+                  rel="noreferrer"
+                >
+                  <Image
+                    fixed={data.github.childImageSharp.fixed}
+                    alt="github-mm"
+                  ></Image>
+                </a>
+              </div>
+            </div>
+            <a
+              href="https://andrewsrichardson.github.io/machine-music"
+              target="_blank"
+              role="button"
+              aria-label="link to machine music repo"
+              rel="noreferrer"
+            >
+              <Image
+                fixed={data.machine_music.childImageSharp.fixed}
+                alt="Machine Music"
+              />
+            </a>
           </div>
-          <div className="trust-this-feast"></div>
+          <div className="trust-this-feast">
+            <div className="data-wrapper">
+              <h3>
+                <span className="highlight-orange">Trust This Feast</span>
+              </h3>
+              <p>Designed/ Developed</p>
+              <div>
+                <a
+                  href="https://github.com/andrewsrichardson/food-blog"
+                  target="_blank"
+                  role="button"
+                  aria-label="link to machine music repo"
+                  rel="noreferrer"
+                >
+                  <Image
+                    fixed={data.github.childImageSharp.fixed}
+                    alt="github-mm"
+                  ></Image>
+                </a>
+              </div>
+            </div>
+            <a
+              href="https://trustthisfeast.com"
+              target="_blank"
+              role="button"
+              aria-label="link to machine music repo"
+              rel="noreferrer"
+            >
+              <Image
+                fixed={data.trust_this_feast.childImageSharp.fixed}
+                alt="Trust This Feast"
+              />
+            </a>
+          </div>
           <div className="music-defined"></div>
         </div>
       </section>
-      <section id="contact" className="contact"></section>
+      {/* <section id="contact" className="contact"></section> */}
     </Layout>
   )
 }
@@ -135,16 +202,23 @@ export const pageQuery = graphql`
         title
       }
     }
-    machine_music: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    machine_music: file(absolutePath: { regex: "/mm-splash.png/" }) {
       childImageSharp {
-        fixed(width: 400, height: 400) {
+        fixed(width: 700, height: 342) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    trust_this_feast: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    trust_this_feast: file(absolutePath: { regex: "/ttf-splash.png/" }) {
       childImageSharp {
-        fixed(width: 400, height: 400) {
+        fixed(width: 700, height: 342) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    github: file(absolutePath: { regex: "/github.png/" }) {
+      childImageSharp {
+        fixed(width: 30, height: 30) {
           ...GatsbyImageSharpFixed
         }
       }
