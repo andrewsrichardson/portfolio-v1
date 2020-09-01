@@ -34,7 +34,7 @@ const Header = ({ color }) => {
         </LocalLink>
       </h2>
       <h2 className={color}>
-        <Link to="/blog">Blog</Link>
+        <Link to="/">Blog</Link>
       </h2>
     </header>
   )

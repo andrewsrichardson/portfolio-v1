@@ -52,6 +52,9 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Header color={headerStyle}></Header>
+      <div className="email">
+        <a href="mailto:and.richardson@live.co.uk">Email Me!</a>
+      </div>
       <section id="about" className="about">
         <div
           class="container"
@@ -74,7 +77,7 @@ const BlogIndex = ({ data, location }) => {
             style={{ transform: props.xy.interpolate(trans4) }}
           >
             <h1>Andrew Richardson</h1>
-            <h2>Freelance Web Developer & Designer based in London.</h2>
+            <h2>Web Developer & Designer based in London.</h2>
           </animated.div>
         </div>
         <div className="arrow"></div>
@@ -107,7 +110,7 @@ const BlogIndex = ({ data, location }) => {
                 <p>
                   Dissertation completed as a web project using Machine Learning
                   (Tensorflow) to create a procedurally generated stream of
-                  music, first class grade achieved.
+                  music.
                 </p>
               </div>
             </div>

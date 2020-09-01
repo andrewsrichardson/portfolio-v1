@@ -2,7 +2,7 @@ header {
   position: fixed;
   display: flex;
   justify-content: flex-end;
-  width: 100%;
+  width: 100vw;
   z-index: 1;
 }
 header > h2 {

@@ -1,7 +1,12 @@
 section {
-  min-height: 100vh;
-  min-width: 100vw;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
 }
+img {
+  margin: 0px;
+}
+
 .about {
   background-color: #2c2930;
   display: flex;
@@ -157,7 +162,17 @@ section {
   margin-bottom: 0px;
   margin-top: 0px;
 }
+.data-wrapper a div {
+  margin-top: 10px;
+}
 .title {
   z-index: 3;
   margin-bottom: 10rem;
+}
+.email {
+  position: fixed;
+  z-index: 3;
+  top: 50%;
+  transform: rotate(-90deg);
+  background-color: #81837e;
 }
