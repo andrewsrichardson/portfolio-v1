@@ -1,11 +1,11 @@
 {
-  "name": "test",
+  "name": "portfolio",
   "private": true,
   "description": "A Web Developer & Designer from London.",
   "version": "0.1.0",
   "author": "Andrew Richardson <and.richardson@live.co.uk>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/andrewsrichardson/portfolio-v1/issues"
   },
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^1.0.43",

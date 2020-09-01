@@ -49,8 +49,8 @@ const BlogIndex = ({ data, location }) => {
     config: { mass: 10, tension: 550, friction: 140 },
   }))
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+    <Layout title={siteTitle}>
+      <SEO title="Portfolio" />
       <Header color={headerStyle}></Header>
       <div className="email">
         <a href="mailto:and.richardson@live.co.uk">Email Me!</a>
