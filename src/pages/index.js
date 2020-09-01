@@ -188,7 +188,7 @@ const BlogIndex = ({ data, location }) => {
               />
             </a>
           </div>
-          <div className="music-defined"></div>
+          {/* <div className="music-defined"></div> */}
         </div>
       </section>
       {/* <section id="contact" className="contact"></section> */}
