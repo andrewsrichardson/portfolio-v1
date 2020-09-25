@@ -32,3 +32,24 @@ p {
   font-weight: 200;
   font-size: 1.5rem;
 }
+li {
+  font-family: "Neuton", "Georgia", serif;
+  font-size: 100;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin-left: 2rem;
+}
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: #2c2930; /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #b2b89e; /* color of the scroll thumb */
+}
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: auto;
+  scrollbar-color: #b2b89e #2c2930;
+}

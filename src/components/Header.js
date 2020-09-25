@@ -18,6 +18,11 @@ const Header = ({ color }) => {
         </LocalLink>
       </h2>
       <h2 className={color}>
+        <LocalLink to="work" spy={true} smooth={true} duration={400}>
+          Work
+        </LocalLink>
+      </h2>
+      <h2 className={color}>
         <LocalLink
           activeClass="active dark"
           to="experience"
@@ -28,11 +33,7 @@ const Header = ({ color }) => {
           Experience
         </LocalLink>
       </h2>
-      <h2 className={color}>
-        <LocalLink to="work" spy={true} smooth={true} duration={400}>
-          Work
-        </LocalLink>
-      </h2>
+
       <h2 className={color}>
         <Link to="/">Blog</Link>
       </h2>

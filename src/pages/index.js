@@ -77,49 +77,47 @@ const BlogIndex = ({ data, location }) => {
             style={{ transform: props.xy.interpolate(trans4) }}
           >
             <h1>Andrew Richardson</h1>
-            <h2>Web Developer & Designer based in London.</h2>
+            <h2>Solo technology consultant based in London.</h2>
+            <h2> Open to new opportunites.</h2>
           </animated.div>
         </div>
         <div className="arrow"></div>
       </section>
-      <section id="experience" ref={elementRef} className="experience">
-        <div className="vertical">
-          {" "}
-          <div className="horizontal">
-            <div className="content">
-              <div className="work-experience">
-                <h3>
-                  <span className="highlight">Accenture</span>
-                </h3>
-                <h4>
-                  Technical Architect (Full Stack Developer) <i>1 Year</i>
-                </h4>
-                <p>
-                  Worked as part of a small team as a Google Cloud Platform
-                  Engineer to produce a single page sentiment analysis web app
-                  for a major retailer.
-                </p>
-              </div>
-              <div className="university">
-                <h3>
-                  <span className="highlight">University of Reading</span>
-                </h3>
-                <h4>
-                  BSc Computer Science <i>2:1</i>
-                </h4>
-                <p>
-                  Dissertation completed as a web project using Machine Learning
-                  (Tensorflow) to create a procedurally generated stream of
-                  music.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="work" className="work">
+
+      <section id="work" ref={elementRef} className="work">
         <h2>Projects</h2>
         <div className="work-content">
+          <div className="machine-music">
+            <div className="data-wrapper">
+              <h3>
+                <span className="highlight">20sos</span>
+              </h3>
+              <p>Designed/ Developed / Co-Own</p>
+              <div>
+                <a
+                  href="https://github.com/andrewsrichardson/quarter-life-frontend"
+                  target="_blank"
+                  role="button"
+                  aria-label="link to 20sos repo"
+                  rel="noreferrer"
+                >
+                  <Image
+                    fixed={data.github.childImageSharp.fixed}
+                    alt="github-mm"
+                  ></Image>
+                </a>
+              </div>
+            </div>
+            <a
+              href="https://20sos.co.uk"
+              target="_blank"
+              role="button"
+              aria-label="link to 20sos"
+              rel="noreferrer"
+            >
+              <Image fixed={data.sos.childImageSharp.fixed} alt="20sos" />
+            </a>
+          </div>
           <div className="machine-music">
             <div className="data-wrapper">
               <h3>
@@ -188,10 +186,60 @@ const BlogIndex = ({ data, location }) => {
               />
             </a>
           </div>
-          {/* <div className="music-defined"></div> */}
         </div>
       </section>
-      {/* <section id="contact" className="contact"></section> */}
+      <section id="experience" className="experience">
+        <div className="vertical">
+          {" "}
+          <div className="horizontal">
+            <div className="content">
+              <div className="work-experience">
+                <h3>
+                  <span className="highlight">Accenture</span>
+                </h3>
+                <h4>
+                  Full Stack Developer <i>1 Year</i>
+                </h4>
+              </div>
+              <div className="university">
+                <h3>
+                  <span className="highlight">University of Reading</span>
+                </h3>
+                <h4>
+                  BSc Computer Science <i>2:1</i>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="skills">
+          <h2>Skills</h2>
+          <ul>
+            <li>Website Development</li>
+            <li>API / Backend Development</li>
+            <li>Technical Consulting</li>
+            <li>eCommerce</li>
+            <li>Static Sites</li>
+            <li>Project Scoping</li>
+            <li>UX Design</li>
+          </ul>
+          <h2>Technologies</h2>
+          <p>
+            React (Gatsby, Next), CMS, Shopify (+ anything else you need to
+            perfect your project)
+          </p>
+          <p style={{ textAlign: "center", margin: "0px " }}>
+            Got a great idea?{" "}
+            <a
+              style={{ textDecoration: "underline dotted" }}
+              className="underline"
+              href="mailto:and.richardson@live.co.uk"
+            >
+              Email Me!
+            </a>
+          </p>
+        </div>
+      </section>
     </Layout>
   )
 }
@@ -203,6 +251,13 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    sos: file(absolutePath: { regex: "/20sos-splash.png/" }) {
+      childImageSharp {
+        fixed(width: 700, height: 342) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
     machine_music: file(absolutePath: { regex: "/mm-splash.png/" }) {

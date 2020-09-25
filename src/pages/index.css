@@ -17,7 +17,7 @@ img {
 .experience {
   background-color: #c6b28a;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=2c293000&noise=626262&density=32&opacity=18);
 }
@@ -52,6 +52,10 @@ img {
 
 .contact {
   background-color: #81837e;
+}
+.skills {
+  border: #2c2930 2px solid;
+  padding: 2rem;
 }
 
 .card1,
@@ -128,6 +132,7 @@ img {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 .machine-music {
   /* position: absolute; */
@@ -179,4 +184,9 @@ img {
   top: 50%;
   transform: rotate(-90deg);
   background-color: #81837e;
+}
+.email > a {
+  font-family: "Titillium Web", "Georgia", serif;
+  font-weight: 100;
+  font-size: 1.5rem;
 }
