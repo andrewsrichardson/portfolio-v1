@@ -135,27 +135,22 @@ img {
   flex-wrap: wrap;
 }
 .machine-music {
-  /* position: absolute; */
   width: 750px;
   height: 400px;
   background-color: #c6b28a;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  left: 65rem;
-  top: 4rem;
   flex-direction: column;
+  margin-bottom: 1rem;
 }
 .trust-this-feast {
-  /* position: absolute; */
   width: 750px;
   height: 400px;
   background-color: #81837e;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 10rem;
-  left: 5rem;
   flex-direction: column-reverse;
 }
 .data-wrapper {
