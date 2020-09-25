@@ -1,5 +1,5 @@
 section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   max-width: 100%;
 }
@@ -12,14 +12,14 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=2c293000&noise=626262&density=32&opacity=18);
+  background-image: url(../../content/assets/whitenoise.png);
 }
 .experience {
   background-color: #c6b28a;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=2c293000&noise=626262&density=32&opacity=18);
+  background-image: url(../../content/assets/whitenoise.png);
 }
 .vertical {
   height: 80ch;
@@ -123,7 +123,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=2c293000&noise=626262&density=32&opacity=18);
+  background-image: url(../../content/assets/whitenoise.png);
 }
 .work-content {
   position: relative;
@@ -189,4 +189,63 @@ img {
   font-family: "Titillium Web", "Georgia", serif;
   font-weight: 100;
   font-size: 1.5rem;
+}
+@media (max-width: 1600px) {
+  .experience {
+    flex-direction: column-reverse;
+  }
+  .vertical,
+  .horizontal,
+  .horizontal > .content,
+  .work-experience,
+  .university {
+    max-width: 95%;
+  }
+}
+@media (max-width: 800px) {
+  header > h2 {
+    margin-right: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  .email {
+    position: relative;
+    z-index: 3;
+    top: 50%;
+    transform: none;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    display: none;
+  }
+  .card4 {
+    color: #81837e;
+  }
+  .work-content {
+    max-width: 95%;
+  }
+  .gatsby-image-wrapper {
+    max-width: 350px;
+  }
+  .machine-music,
+  .trust-this-feast {
+    max-width: 95%;
+    margin-bottom: 5rem;
+    height: auto;
+  }
+  #machine-music {
+    display: none;
+  }
+  .experience {
+    flex-direction: column-reverse;
+  }
+  .vertical,
+  .horizontal,
+  .horizontal > .content,
+  .work-experience,
+  .university {
+    max-width: 95%;
+  }
 }

@@ -118,7 +118,7 @@ const BlogIndex = ({ data, location }) => {
               <Image fixed={data.sos.childImageSharp.fixed} alt="20sos" />
             </a>
           </div>
-          <div className="machine-music">
+          <div id="machine-music" className="machine-music">
             <div className="data-wrapper">
               <h3>
                 <span className="highlight">Machine Music</span>

@@ -3,9 +3,9 @@ module.exports = {
     title: `Andrew Richardson`,
     author: {
       name: `Andrew Richardson`,
-      summary: `A web designer/ developer from London.`,
+      summary: `A web designer / developer from London.`,
     },
-    description: `A web designer/ developer from London.`,
+    description: `A web designer / developer from London.`,
     siteUrl: `https://andrewsrichardson.netlify.app/`,
     social: {
       twitter: `none`,
